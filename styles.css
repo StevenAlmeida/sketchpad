@@ -49,6 +49,10 @@ h1 {
     border: 2px solid white;
 }
 
+.selected-black {
+    border: 2px solid black;
+}
+
 #black {
     background-color: black;
 }
@@ -63,4 +67,8 @@ h1 {
 
 #green {
     background-color: #08c70e;
+}
+
+#eraser {
+    background-color: #e6f0f5;
 }
