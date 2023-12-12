@@ -2,6 +2,7 @@ const GRID_SIZE = 16;
 const COLOR_LIST = ["black", "red", "green", "blue", "eraser"];
 const canvas = document.querySelector("#canvas");
 const colorButtons = document.querySelectorAll(".color-option");
+const clearButton = document.querySelector("#clear-button");
 let selectedColor;
 let mouseDown = false;
 let grid = [];
@@ -17,6 +18,17 @@ document.body.onmousedown = function(e)
     e.preventDefault();
 }
 document.body.onmouseup = function() { mouseDown = false; }
+
+function clearCanvas()
+{
+    const canvasNodes = canvas.children;
+    for (node of canvasNodes)
+    {
+        node.classList.remove(...COLOR_LIST);
+        node.classList.add("eraser");
+
+    }
+}
 
 function changeColor(newColor)
 {
@@ -57,7 +69,9 @@ for (let x = 0; x < GRID_SIZE; x++)
         const newNode = document.createElement("div");
         newNode.style.height = (1/GRID_SIZE) * 100 + "%";
         newNode.style.width = (1/GRID_SIZE) * 100 + "%";
+        newNode.classList.add("eraser");
         canvas.appendChild(newNode);
+        grid[x][y] = newNode;
         
         newNode.addEventListener("mouseover", () => {
             if (!mouseDown) return;
@@ -75,3 +89,6 @@ for (let x = 0; x < GRID_SIZE; x++)
         });
     }
 }
+
+// SETUP CLEAR BUTTON
+clearButton.addEventListener("click", clearCanvas);
