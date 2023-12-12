@@ -8,6 +8,7 @@ h1 {
     color: white;
     font-size: 3em;
     font-family: sans-serif;
+    cursor: default;
 }
 
 #container {
@@ -27,14 +28,18 @@ h1 {
     max-width: 550px;
     max-height: 550px;
     background-color: #e6f0f5;
+    display: flex;
+    flex-wrap: wrap;
+    filter: drop-shadow(5px 5px 10px #000000);
 }
 
 #color-picker {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     width: 90vw;
     max-width: 550px;
-    justify-content: center;
     gap: 10px;
 }
 
@@ -43,6 +48,7 @@ h1 {
     height: 30px;
     border-radius: 0;
     border: 0;
+    cursor: pointer;
 }
 
 .selected {
@@ -53,22 +59,22 @@ h1 {
     border: 2px solid black;
 }
 
-#black {
+.black {
     background-color: black;
 }
 
-#red {
+.red {
     background-color: #db0f0f;
 }
 
-#blue {
+.blue {
     background-color: #1414db;
 }
 
-#green {
+.green {
     background-color: #08c70e;
 }
 
-#eraser {
+.eraser {
     background-color: #e6f0f5;
 }
