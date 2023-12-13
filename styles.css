@@ -4,15 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-y: hidden;
-    position: relative;
-}
-
 h1 {
     color: white;
     font-size: 3em;
-    font-family: sans-serif;
+    font-family: system-ui, sans-serif;
     cursor: default;
 }
 
@@ -49,9 +44,10 @@ h1 {
     filter: drop-shadow(2px 2px 5px #000000);
     margin-top: -10px;
     cursor: pointer;
+    color: black;
 }
 
-#color-picker {
+#pallete {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -78,24 +74,4 @@ h1 {
 
 .selected-black {
     border: 2px solid black;
-}
-
-.black {
-    background-color: black;
-}
-
-.red {
-    background-color: #db0f0f;
-}
-
-.blue {
-    background-color: #1414db;
-}
-
-.green {
-    background-color: #08c70e;
-}
-
-.eraser {
-    background-color: #e6f0f5;
 }
